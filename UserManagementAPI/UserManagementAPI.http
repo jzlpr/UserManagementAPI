@@ -1,0 +1,62 @@
+@UserManagementAPI_HostAddress = http://localhost:5232
+@Token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkNoYXJsaWUgQnJvd24iLCJlbWFpbCI6ImNoYXJsaWUuYnJvd25AZXhhbXBsZS5jb20iLCJuYmYiOjE3NDI3NTc5NTQsImV4cCI6MTc0Mjc2MTU1NCwiaWF0IjoxNzQyNzU3OTU0LCJpc3MiOiJodHRwczovL3lvdXItYXBwLmNvbSIsImF1ZCI6Imh0dHBzOi8veW91ci1hcHAuY29tIn0.pGIxCA8c3ggvXaBe5BlYdXZeVeG4EZcZfY5OcE0-v40
+
+### Retrieve the root route
+GET {{UserManagementAPI_HostAddress}}
+Content-Type: application/json
+Authorization: {{Token}}
+
+### Retrieve an error message
+GET {{UserManagementAPI_HostAddress}}/error
+Content-Type: application/json
+Authorization: {{Token}}
+
+### Retrieve all users or filter by name and/or email
+GET {{UserManagementAPI_HostAddress}}/users
+Content-Type: application/json
+Authorization: {{Token}}
+
+### Retrieve a user by ID (e.g., ID = 1)
+GET {{UserManagementAPI_HostAddress}}/users/1
+Content-Type: application/json
+Authorization: {{Token}}
+
+### Add a new user
+POST {{UserManagementAPI_HostAddress}}/users
+Content-Type: application/json
+
+{
+    "name": "Charlie Brown",
+    "email": "charlie.brown@example.com"
+}
+
+### Update an existing user (e.g., ID = 1)
+PUT {{UserManagementAPI_HostAddress}}/users/1
+Content-Type: application/json
+
+{
+    "name": "Alice Updated",
+    "email": "alice.updated@example.com"
+}
+
+### Delete a user (e.g., ID = 1)
+DELETE {{UserManagementAPI_HostAddress}}/users/2
+Content-Type: application/json
+
+### Retrieve the protected route
+GET {{UserManagementAPI_HostAddress}}/protected
+Content-Type: application/json
+
+### Send a POST request to /login with valid userName and email to get a JWT token.
+POST {{UserManagementAPI_HostAddress}}/login?userName=Charlie%20Brown&email=charlie.brown@example.com
+Content-Type: application/json
+
+{
+    "userName": "Alice Updated",
+    "email": "alice.updated@example.com"
+}
+
+### Use the token in the Authorization header (e.g., Bearer <token>) to access a protected route like /protected
+GET {{UserManagementAPI_HostAddress}}/protected
+Content-Type: application/json
+Authorization: {{Token}}
