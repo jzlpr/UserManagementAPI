@@ -53,19 +53,4 @@ public class ExceptionHandlingMiddleware
         // Serialize the response to JSON
         return context.Response.WriteAsync(JsonSerializer.Serialize(response));
     }
-
-    // private static Task HandleExceptionAsync(HttpContext context, Exception exception)
-    // {
-    //     // Create a response with a 500 status code and an error message
-    //     var response = new
-    //     {
-    //         error = "Internal server error."
-    //     };
-
-    //     context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-    //     context.Response.ContentType = "application/json";
-
-    //     // Serialize the response to JSON
-    //     return context.Response.WriteAsync(JsonSerializer.Serialize(response));
-    // }
 }
