@@ -48,7 +48,7 @@ Advised on organizing the project structure for clarity and scalability.
 
 Provided feedback on logging, asynchronous patterns, and profiling techniques for better performance.
 
-###Secret Management:
+### Secret Management:
 
 Helped generate a 256-bit secure secret key for signing JWT tokens.
 
