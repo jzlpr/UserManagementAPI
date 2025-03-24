@@ -6,7 +6,7 @@ using UserManagementAPI.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add configuration for JWT
-string secretKey = "5CH54CT128LOqYOa6I/wZ1a2hxZ/fk8OF1fss8p3Z3A="; // Use a secure, randomly generated key
+string secretKey = "secret"; // Use a secure, randomly generated key
 string issuer = "https://your-app.com";
 string audience = "https://your-app.com";
 
