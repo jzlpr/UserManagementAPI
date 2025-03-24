@@ -1,6 +1,5 @@
 @UserManagementAPI_HostAddress = http://localhost:5232
-@Token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkNoYXJsaWUgQnJvd24iLCJlbWFpbCI6ImNoYXJsaWUuYnJvd25AZXhhbXBsZS5jb20iLCJuYmYiOjE3NDI3NTc5NTQsImV4cCI6MTc0Mjc2MTU1NCwiaWF0IjoxNzQyNzU3OTU0LCJpc3MiOiJodHRwczovL3lvdXItYXBwLmNvbSIsImF1ZCI6Imh0dHBzOi8veW91ci1hcHAuY29tIn0.pGIxCA8c3ggvXaBe5BlYdXZeVeG4EZcZfY5OcE0-v40
-
+@Token = Bearer <token>
 ### Retrieve the root route
 GET {{UserManagementAPI_HostAddress}}
 Content-Type: application/json
